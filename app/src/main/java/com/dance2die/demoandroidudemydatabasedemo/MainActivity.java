@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
         try {
             SQLiteDatabase myDatabase = this.openOrCreateDatabase("Users", MODE_PRIVATE, null);
             myDatabase.execSQL("CREATE TABLE IF NOT EXISTS users (name VARCHAR, age INT(3))");
-            myDatabase.execSQL("INSERT INTO users(name, age) VALUES ('Rob', 34)");
-            myDatabase.execSQL("INSERT INTO users(name, age) VALUES ('Tommy', 4)");
+//            myDatabase.execSQL("INSERT INTO users(name, age) VALUES ('Rob', 34)");
+//            myDatabase.execSQL("INSERT INTO users(name, age) VALUES ('Tommy', 4)");
+//            myDatabase.execSQL("INSERT INTO users(name, age) VALUES ('Kirsten', 24)");
+//            myDatabase.execSQL("INSERT INTO users(name, age) VALUES ('Ralphie', 1)");
 
             Cursor cursor = myDatabase.rawQuery("SELECT * FROM users", null);
             int nameIndex = cursor.getColumnIndex("name");
